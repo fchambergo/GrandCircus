@@ -4,7 +4,7 @@ async function getCurrentWeather(city: string) {
     const API_KEY = process.env.REACT_APP_API_KEY;
 
     try {
-        const res = await fetch(`${baseURL}?q=${city}&appid=${API_KEY}`);
+        const res = await fetch(`${baseURL}?q=${city}&appid=${API_KEY}&units=imperial`);
         const data = await res.json();
         return data;
     } catch(err) {
