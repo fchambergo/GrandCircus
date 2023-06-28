@@ -1,8 +1,8 @@
-
-
+//Child component to receive and display data
 function Result ({weather}: any) {
-    const data = weather.data
+    const data = weather.data;
     
+    //Bind data to properties passed on by parent component
     const { feels_like, temp } = data.main;
     const { description } = data.weather[0];
     const { speed } = data.wind;
